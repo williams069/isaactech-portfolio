@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6d5dfc">
+  <meta name="description" content="IsaacTech — web developer, logo designer, and game developer creating thoughtful digital experiences.">
+  <meta property="og:title" content="IsaacTech | Developer & Designer">
+  <meta property="og:description" content="Explore web development, brand design, and game development projects by IsaacTech.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/profile.jpg">
+  <title>IsaacTech | Developer & Designer</title>
+  <!-- ADD FAVICON HERE: <link rel="icon" href="images/favicon.png"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f7f7fc;--surface:#fff;--surface2:#efeffa;--text:#17172a;--muted:#66677f;--line:rgba(34,32,71,.12);--accent:#6d5dfc;--accent2:#a49bff;--shadow:0 18px 55px rgba(38,32,95,.12);--nav:rgba(247,247,252,.88)}
+    [data-theme="dark"]{--bg:#10101a;--surface:#191927;--surface2:#222236;--text:#f5f4ff;--muted:#b4b2cb;--line:rgba(255,255,255,.12);--accent:#a49bff;--accent2:#6d5dfc;--shadow:0 18px 55px rgba(0,0,0,.28);--nav:rgba(16,16,26,.88)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.65;transition:background .25s,color .25s}body.loading{overflow:hidden}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}button{cursor:pointer}img{max-width:100%;display:block}h1,h2,h3,h4{font-family:"Space Grotesk",sans-serif;line-height:1.15;margin:0 0 1rem}p{color:var(--muted);margin:.4rem 0 1rem}.container{width:min(1120px,calc(100% - 40px));margin-inline:auto}.section{padding:100px 0}.section-head{max-width:650px;margin-bottom:42px}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;margin-bottom:12px}.section-title{font-size:clamp(2rem,4vw,3.15rem);letter-spacing:-.045em}.gradient{background:linear-gradient(110deg,var(--accent),#c06cff);-webkit-background-clip:text;background-clip:text;color:transparent}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid transparent;border-radius:12px;padding:12px 18px;font-weight:700;transition:transform .2s,box-shadow .2s,background .2s;color:var(--text);background:var(--surface2)}.btn:hover{transform:translateY(-3px)}.btn-primary{background:var(--accent);color:#fff;box-shadow:0 9px 24px rgba(109,93,252,.25)}.btn-primary:hover{box-shadow:0 13px 30px rgba(109,93,252,.35)}.btn-outline{border-color:var(--line);background:transparent}.btn-small{padding:8px 12px;border-radius:9px;font-size:.88rem}.icon-btn{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--text)}.icon-btn:hover{border-color:var(--accent);color:var(--accent)}.muted{color:var(--muted)}.top-progress{position:fixed;z-index:2000;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),#d18aff)}#loader{position:fixed;inset:0;background:var(--bg);z-index:3000;display:grid;place-items:center;transition:opacity .4s,visibility .4s}#loader.hidden{opacity:0;visibility:hidden}.loader-mark{font:700 2rem "Space Grotesk";color:var(--accent);animation:pulse 1s infinite alternate}@keyframes pulse{to{opacity:.35;transform:scale(.96)}}
+    header{position:sticky;top:0;z-index:1000;background:var(--nav);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font:700 1.35rem "Space Grotesk";letter-spacing:-.05em}.brand span{color:var(--accent)}.nav-links{display:flex;align-items:center;gap:25px}.nav-links a{font-size:.92rem;color:var(--muted);font-weight:600;position:relative}.nav-links a:hover,.nav-links a.active{color:var(--accent)}.nav-links a.active:after{content:"";position:absolute;bottom:-10px;left:0;right:0;height:2px;background:var(--accent);border-radius:4px}.nav-actions{display:flex;gap:9px;align-items:center}.menu-toggle{display:none}
+    .hero{min-height:calc(100vh - 76px);display:grid;align-items:center;padding:72px 0 86px;overflow:hidden;position:relative}.hero:before{content:"";position:absolute;width:440px;height:440px;border-radius:50%;background:var(--accent);filter:blur(150px);opacity:.13;right:-130px;top:5%}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:60px;position:relative}.hero h1{font-size:clamp(3rem,7vw,5.6rem);letter-spacing:-.065em;margin:.2rem 0 1.1rem}.hero h1 .name{display:block}.typed-line{font-size:clamp(1.1rem,2.4vw,1.55rem);font-weight:700;min-height:2.2em}.cursor{display:inline-block;width:2px;height:1.1em;background:var(--accent);vertical-align:middle;margin-left:4px;animation:blink .8s steps(2) infinite}@keyframes blink{50%{opacity:0}}.hero-copy{font-size:1.08rem;max-width:590px}.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0}.socials{display:flex;gap:10px;flex-wrap:wrap}.social-link{width:42px;height:42px;border:1px solid var(--line);background:var(--surface);border-radius:13px;display:grid;place-items:center;font-weight:700;color:var(--muted);transition:.2s}.social-link:hover{color:var(--accent);transform:translateY(-3px);border-color:var(--accent)}.hero-visual{position:relative;max-width:410px;margin:auto}.portrait-frame{aspect-ratio:4/5;border-radius:42% 42% 25px 25px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(145deg,var(--surface2),var(--surface));box-shadow:var(--shadow);position:relative}.portrait-frame img{width:100%;height:100%;object-fit:cover}.float-card{position:absolute;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;padding:13px 17px;display:flex;gap:11px;align-items:center;font-size:.9rem;font-weight:700}.float-card small{display:block;color:var(--muted);font-weight:500}.float-one{left:-42px;bottom:16%}.float-two{right:-25px;top:13%}.float-icon{width:37px;height:37px;display:grid;place-items:center;background:var(--surface2);border-radius:11px;color:var(--accent);font-size:1.2rem}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px;align-items:center}.about-photo{aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:var(--surface2);box-shadow:var(--shadow)}.about-photo img{width:100%;height:100%;object-fit:cover}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:25px 0}.fact{background:var(--surface);border:1px solid var(--line);padding:15px;border-radius:14px}.fact strong{display:block;font-size:1.02rem}.fact span{font-size:.8rem;color:var(--muted)}.skills-section{background:var(--surface2)}.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.skill-card{background:var(--surface);padding:23px;border:1px solid var(--line);border-radius:18px;transition:transform .2s}.skill-card:hover,.project-card:hover{transform:translateY(-5px)}.skill-top{display:flex;justify-content:space-between;gap:10px;font-weight:700;margin-bottom:13px}.skill-top span:last-child{color:var(--accent)}.bar{height:8px;background:var(--surface2);border-radius:20px;overflow:hidden}.bar span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--accent),#c06cff);border-radius:20px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+    .filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:25px}.filter-btn{border:1px solid var(--line);border-radius:999px;padding:8px 16px;background:var(--surface);color:var(--muted);font-weight:700}.filter-btn.active,.filter-btn:hover{background:var(--accent);color:white;border-color:var(--accent)}.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.project-card{background:var(--surface);border:1px solid var(--line);border-radius:19px;overflow:hidden;transition:transform .25s,opacity .25s;min-width:0}.project-card.hide{display:none}.project-thumb{height:190px;background:var(--surface2);overflow:hidden}.project-thumb img{height:100%;width:100%;object-fit:cover;transition:transform .5s}.project-card:hover .project-thumb img{transform:scale(1.05)}.project-content{padding:20px}.project-content h3{font-size:1.2rem;margin-bottom:8px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 18px}.tag{font-size:.76rem;background:var(--surface2);color:var(--muted);padding:4px 9px;border-radius:7px}.project-actions{display:flex;gap:8px;flex-wrap:wrap}.project-actions .btn{flex:1}.video-panel{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;background:var(--surface);border:1px solid var(--line);padding:24px;border-radius:24px;box-shadow:var(--shadow)}.video-shell{position:relative;aspect-ratio:16/10;background:#17172a;border-radius:16px;overflow:hidden}.video-shell video,.video-shell iframe{width:100%;height:100%;object-fit:cover;border:0}.video-shell .video-cover{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,10,20,.55),transparent 60%);display:grid;place-items:center;cursor:pointer}.play-button{width:72px;height:72px;border:0;border-radius:50%;background:var(--accent);color:white;font-size:1.5rem;box-shadow:0 8px 30px #0005;transition:transform .2s}.play-button:hover{transform:scale(1.1)}.timeline{position:relative;max-width:850px;margin-left:12px}.timeline:before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:var(--line)}.timeline-item{position:relative;padding:0 0 32px 40px}.timeline-item:before{content:"";position:absolute;left:1px;top:6px;width:16px;height:16px;border:3px solid var(--accent);background:var(--bg);border-radius:50%;z-index:1}.timeline-item h3{font-size:1.15rem;margin-bottom:5px}.timeline-meta{font-size:.88rem;color:var(--accent);font-weight:700;margin-bottom:9px}.testimonial-section{background:var(--surface2)}.testimonial-wrap{max-width:790px;margin:auto}.testimonial-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(25px,5vw,48px);text-align:center;box-shadow:var(--shadow)}.quote-mark{font:700 4rem Georgia;color:var(--accent);line-height:.9}.quote{font-size:clamp(1.1rem,2.5vw,1.45rem);color:var(--text);margin:12px auto 25px;max-width:650px}.client{display:flex;align-items:center;justify-content:center;gap:12px}.avatar{width:48px;height:48px;border-radius:50%;object-fit:cover;background:var(--surface2)}.client-name{text-align:left;font-weight:700}.client-name small{display:block;color:var(--muted);font-weight:500}.carousel-controls{display:flex;justify-content:center;align-items:center;gap:15px;margin-top:20px}.dots{display:flex;gap:7px}.dot{width:9px;height:9px;border:0;border-radius:50%;background:var(--muted);opacity:.4;padding:0}.dot.active{background:var(--accent);opacity:1;transform:scale(1.25)}
+    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}.contact-list{display:grid;gap:14px;margin-top:25px}.contact-item{display:flex;gap:13px;align-items:center;padding:15px;border:1px solid var(--line);background:var(--surface);border-radius:14px}.contact-item .float-icon{flex-shrink:0}.contact-item small{display:block;color:var(--muted)}.contact-form{padding:27px;background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:grid;gap:7px;margin-bottom:16px}.field label{font-weight:700;font-size:.9rem}.field input,.field textarea{width:100%;border:1px solid var(--line);background:var(--bg);color:var(--text);padding:12px 14px;border-radius:11px;outline:none}.field input:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 16%,transparent)}.field textarea{min-height:135px;resize:vertical}.form-status{margin:12px 0 0;font-weight:600;min-height:1.5em}.form-status.success{color:#21865b}.form-status.error{color:#d34444}.site-footer{padding:35px 0;border-top:1px solid var(--line)}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:15px;flex-wrap:wrap}.footer-links a{font-size:.88rem;color:var(--muted)}.footer-links a:hover{color:var(--accent)}#back-top{position:fixed;right:22px;bottom:22px;z-index:900;opacity:0;visibility:hidden;transform:translateY(10px);transition:.2s}#back-top.visible{opacity:1;visibility:visible;transform:none}
+    .modal{position:fixed;inset:0;z-index:2500;background:rgba(7,7,17,.72);display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(7px)}.modal.open{display:flex}.modal-dialog{width:min(720px,100%);max-height:90vh;overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:20px;position:relative;box-shadow:var(--shadow)}.modal-close{position:absolute;right:13px;top:13px;z-index:2}.modal-image{width:100%;height:280px;object-fit:cover;background:var(--surface2)}.modal-body{padding:25px}.lightbox-image{width:100%;max-height:80vh;object-fit:contain}.lightbox .modal-dialog{width:min(1000px,100%);background:#10101a}.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.in-view{opacity:1;transform:none}.image-fallback{display:grid!important;place-items:center;background:linear-gradient(135deg,var(--surface2),var(--surface));color:var(--muted);font-weight:700;font-size:.85rem;text-align:center;min-height:100px;padding:15px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:900px){.nav-links{gap:15px}.hero-grid{gap:35px}.float-one{left:-18px}.float-two{right:-10px}.projects-grid{grid-template-columns:repeat(2,1fr)}.skills-grid{grid-template-columns:repeat(2,1fr)}.about-grid{gap:35px}.video-panel{gap:25px}.contact-grid{gap:28px}}
+    @media(max-width:720px){.section{padding:75px 0}.container{width:min(100% - 32px,1120px)}.nav{min-height:68px}.menu-toggle{display:grid}.nav-links{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;padding:14px 20px 22px;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:12px 0}.nav-links a.active:after{display:none}.nav-actions .btn{display:none}.hero{min-height:auto;padding:65px 0}.hero-grid{grid-template-columns:1fr;text-align:center}.hero-copy{margin-inline:auto}.hero-ctas,.socials{justify-content:center}.hero-visual{width:min(78%,340px);margin-top:10px}.float-one{left:-25px}.float-two{right:-25px}.about-grid,.video-panel,.contact-grid{grid-template-columns:1fr}.about-photo{max-width:390px;width:100%;margin:auto}.facts{grid-template-columns:repeat(3,1fr)}.video-panel{padding:16px}.contact-form{padding:20px}.footer-row{justify-content:center;text-align:center}.footer-links{justify-content:center}}
+    @media(max-width:480px){.hero h1{font-size:3rem}.projects-grid,.skills-grid{grid-template-columns:1fr}.project-thumb{height:210px}.form-grid{grid-template-columns:1fr;gap:0}.facts{grid-template-columns:1fr}.fact{display:flex;justify-content:space-between;align-items:center}.fact strong{font-size:.95rem}.float-card{padding:9px 11px;font-size:.8rem}.float-icon{width:31px;height:31px}.hero-visual{width:82%}.section-head{margin-bottom:30px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body class="loading">
+  <div class="top-progress" id="top-progress" aria-hidden="true"></div>
+  <div id="loader" role="status" aria-label="Loading website"><div class="loader-mark">Isaac<span class="gradient">Tech.</span></div></div>
+  <header>
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="IsaacTech home">Isaac<span>Tech.</span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#video">Video</a><a href="#experience">Experience</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Switch to dark mode" title="Toggle light/dark mode">☾</button>
+        <a class="btn btn-primary btn-small" href="#contact">Let's Talk ↗</a>
+        <button class="icon-btn menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <span class="eyebrow">✦ Creative developer & designer</span>
+          <h1>Hi, I'm <span class="name gradient"><!-- REPLACE: YOUR NAME -->IsaacTech</span></h1>
+          <div class="typed-line"><span id="typed-role">Web Developer</span><span class="cursor" aria-hidden="true"></span></div>
+          <p class="hero-copy"><!-- REPLACE: YOUR TAGLINE -->I turn ideas into polished digital experiences through web development, brand design, and game development.</p>
+          <div class="hero-ctas"><a class="btn btn-primary" href="#projects">View My Work <span aria-hidden="true">↘</span></a><a class="btn btn-outline" href="#contact">Contact Me <span aria-hidden="true">↗</span></a></div>
+          <div class="socials" aria-label="Social links">
+            <!-- REPLACE: SOCIAL LINKS with your real profile URLs -->
+            <a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+            <a class="social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">⌘</a>
+            <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+            <a class="social-link" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">𝕏</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="portrait-frame">
+            <!-- REPLACE WITH YOUR PHOTO -->
+            <img src="images/profile.jpg" alt="Photo of IsaacTech" data-fallback="Profile photo">
+          </div>
+          <div class="float-card float-one"><span class="float-icon">✦</span><span>Creative solutions<small>From idea to launch</small></span></div>
+          <div class="float-card float-two"><span class="float-icon">⌘</span><span>Digital builder<small>Web · Design · Games</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-photo reveal">
+          <!-- REPLACE WITH ABOUT PHOTO -->
+          <img src="images/about.jpg" alt="IsaacTech working on a creative project" data-fallback="About photo">
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">A little about me</span><h2 class="section-title">Building useful things, <span class="gradient">beautifully.</span></h2>
+          <!-- REPLACE: YOUR BIO -->
+          <p>I'm IsaacTech, a creative web developer, logo designer, and game developer who enjoys turning ideas into digital products that look great and work smoothly.</p>
+          <p>I combine thoughtful design with practical code to build responsive websites, memorable visual identities, and engaging game experiences. I value clear communication, attention to detail, and solutions that help people reach their goals.</p>
+          <p>Have an idea you want to bring to life? Let's work together and make it real.</p>
+          <div class="facts">
+            <div class="fact"><strong>Lagos, Nigeria</strong><span>Location</span></div>
+            <div class="fact"><strong>Project-based</strong><span>Experience</span></div>
+            <div class="fact"><strong>Available</strong><span>For projects</span></div>
+          </div>
+          <!-- Put your PDF at files/cv.pdf to make this download link work. -->
+          <a class="btn btn-primary" href="files/cv.pdf" download>Download CV ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">What I do</span><h2 class="section-title">Skills & <span class="gradient">tools</span></h2><p>A mix of technical know-how and creative thinking to take projects from concept to launch.</p></div>
+        <div class="skills-grid">
+          <div class="skill-card reveal"><div class="skill-top"><span>Web Development</span><span>90%</span></div><div class="bar"><span data-width="90%"></span></div></div>
+          <div class="skill-card reveal"><div class="skill-top"><span>HTML / CSS / JavaScript</span><span>88%</span></div><div class="bar"><span data-width="88%"></span></div></div>
+          <div class="skill-card reveal"><div class="skill-top"><span>UI / UX Design</span><span>82%</span></div><div class="bar"><span data-width="82%"></span></div></div>
+          <div class="skill-card reveal"><div class="skill-top"><span>Logo & Brand Design</span><span>85%</span></div><div class="bar"><span data-width="85%"></span></div></div>
+          <div class="skill-card reveal"><div class="skill-top"><span>Game Development</span><span>78%</span></div><div class="bar"><span data-width="78%"></span></div></div>
+          <div class="skill-card reveal"><div class="skill-top"><span>Creative Problem Solving</span><span>92%</span></div><div class="bar"><span data-width="92%"></span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Selected work</span><h2 class="section-title">Projects made with <span class="gradient">purpose.</span></h2><p>Here are sample portfolio entries. Replace their images, descriptions, and demo URLs with your own published work.</p></div>
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button><button class="filter-btn" data-filter="web" aria-pressed="false">Web Development</button><button class="filter-btn" data-filter="design" aria-pressed="false">Brand Design</button><button class="filter-btn" data-filter="game" aria-pressed="false">Game Development</button>
+        </div>
+        <div class="projects-grid" id="projects-grid">
+          <!-- REPLACE WITH PROJECT IMAGE -->
+          <article class="project-card reveal" data-category="web" data-title="Creative Studio Website" data-image="images/project1.jpg" data-description="A responsive landing page concept for a creative studio, focused on clear messaging, polished visuals, and an easy contact journey." data-tools="HTML, CSS, JavaScript" data-demo="https://github.com/">
+            <div class="project-thumb"><img src="images/project1.jpg" alt="Creative studio website project preview" loading="lazy" data-fallback="Project 1"></div><div class="project-content"><h3>Creative Studio Website</h3><p>A modern web presence for a creative brand.</p><div class="tags"><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span></div><div class="project-actions"><a class="btn btn-primary btn-small demo-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a><button class="btn btn-outline btn-small details-btn">Details</button></div></div>
+          </article>
+          <!-- REPLACE WITH PROJECT IMAGE -->
+          <article class="project-card reveal" data-category="design" data-title="Nova Brand Identity" data-image="images/project2.jpg" data-description="A visual identity concept with a distinctive logo direction, consistent colors, and flexible brand assets for digital use." data-tools="Illustrator, Figma, Brand Strategy" data-demo="https://www.behance.net/">
+            <div class="project-thumb"><img src="images/project2.jpg" alt="Nova brand identity project preview" loading="lazy" data-fallback="Project 2"></div><div class="project-content"><h3>Nova Brand Identity</h3><p>A bold identity system for a growing brand.</p><div class="tags"><span class="tag">Logo Design</span><span class="tag">Branding</span></div><div class="project-actions"><a class="btn btn-primary btn-small demo-link" href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a><button class="btn btn-outline btn-small details-btn">Details</button></div></div>
+          </article>
+          <!-- REPLACE WITH PROJECT IMAGE -->
+          <article class="project-card reveal" data-category="game" data-title="Roblox Adventure Concept" data-image="images/project3.jpg" data-description="A game concept focused on exploration, simple objectives, and an inviting world. Replace this sample with details of your own Roblox experience." data-tools="Roblox Studio, Lua, Level Design" data-demo="https://www.roblox.com/">
+            <div class="project-thumb"><img src="images/project3.jpg" alt="Roblox adventure game project preview" loading="lazy" data-fallback="Project 3"></div><div class="project-content"><h3>Roblox Adventure Concept</h3><p>An exploratory game concept with playful mechanics.</p><div class="tags"><span class="tag">Roblox</span><span class="tag">Game Design</span></div><div class="project-actions"><a class="btn btn-primary btn-small demo-link" href="https://www.roblox.com/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a><button class="btn btn-outline btn-small details-btn">Details</button></div></div>
+          </article>
+          <!-- REPLACE WITH PROJECT IMAGE -->
+          <article class="project-card reveal" data-category="web" data-title="Personal Portfolio UI" data-image="images/project4.jpg" data-description="A personal portfolio interface with clear content hierarchy, responsive layouts, and lightweight interactions." data-tools="HTML, CSS, JavaScript, Figma" data-demo="https://github.com/">
+            <div class="project-thumb"><img src="images/project4.jpg" alt="Personal portfolio interface preview" loading="lazy" data-fallback="Project 4"></div><div class="project-content"><h3>Personal Portfolio UI</h3><p>A clean portfolio layout built around the work.</p><div class="tags"><span class="tag">UI/UX</span><span class="tag">Responsive</span></div><div class="project-actions"><a class="btn btn-primary btn-small demo-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a><button class="btn btn-outline btn-small details-btn">Details</button></div></div>
+          </article>
+          <!-- REPLACE WITH PROJECT IMAGE -->
+          <article class="project-card reveal" data-category="design" data-title="Social Media Campaign" data-image="images/project5.jpg" data-description="A cohesive set of promotional graphics designed to maintain brand consistency across social platforms." data-tools="Canva, Photoshop, Typography" data-demo="https://www.behance.net/">
+            <div class="project-thumb"><img src="images/project5.jpg" alt="Social media campaign design preview" loading="lazy" data-fallback="Project 5"></div><div class="project-content"><h3>Social Media Campaign</h3><p>Campaign graphics with a consistent visual voice.</p><div class="tags"><span class="tag">Graphic Design</span><span class="tag">Social</span></div><div class="project-actions"><a class="btn btn-primary btn-small demo-link" href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a><button class="btn btn-outline btn-small details-btn">Details</button></div></div>
+          </article>
+          <!-- REPLACE WITH PROJECT IMAGE -->
+          <article class="project-card reveal" data-category="game" data-title="Game UI Kit" data-image="images/project6.jpg" data-description="A game interface concept exploring readable menus, player status elements, and consistent UI components." data-tools="Figma, Roblox Studio, UI Design" data-demo="https://www.roblox.com/">
+            <div class="project-thumb"><img src="images/project6.jpg" alt="Game user interface kit preview" loading="lazy" data-fallback="Project 6"></div><div class="project-content"><h3>Game UI Kit</h3><p>Game interface components designed for clarity.</p><div class="tags"><span class="tag">Game UI</span><span class="tag">Prototyping</span></div><div class="project-actions"><a class="btn btn-primary btn-small demo-link" href="https://www.roblox.com/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a><button class="btn btn-outline btn-small details-btn">Details</button></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="video">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Watch & explore</span><h2 class="section-title">A little work in <span class="gradient">motion.</span></h2></div>
+        <div class="video-panel reveal">
+          <div class="video-shell" id="video-shell">
+            <!-- REPLACE WITH YOUR VIDEO -->
+            <!-- Option A (local file): <video controls poster="images/video-thumbnail.jpg"><source src="videos/intro.mp4" type="video/mp4"></video> -->
+            <!-- Option B (YouTube/Vimeo embed): replace the iframe src with your embed URL. -->
+            <video id="intro-video" controls playsinline preload="metadata" poster="images/video-thumbnail.jpg">
+              <source src="videos/intro.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            <button class="video-cover" id="video-play" aria-label="Play featured video"><span class="play-button" aria-hidden="true">▶</span></button>
+          </div>
+          <div><span class="eyebrow">Featured video</span><h3 style="font-size:1.7rem">See how the ideas come together.</h3><p>Showcase a project walkthrough, design process, game trailer, or a short introduction. Add your video file and thumbnail using the folder checklist below.</p><button class="btn btn-outline" id="video-lightbox-btn">View video larger ↗</button></div>
+        </div>
+        <div class="filters reveal" style="margin-top:22px" aria-label="More video thumbnails">
+          <button class="filter-btn video-thumb" data-video="videos/intro.mp4" data-poster="images/video-thumbnail.jpg">▶ Featured walkthrough</button>
+          <button class="filter-btn video-thumb" data-video="videos/extra1.mp4" data-poster="images/video2.jpg">▶ Design process</button>
+          <button class="filter-btn video-thumb" data-video="videos/extra2.mp4" data-poster="images/video3.jpg">▶ Game preview</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">My journey</span><h2 class="section-title">Experience & <span class="gradient">learning.</span></h2><p>Use this timeline to highlight your real roles, education, freelance projects, and milestones.</p></div>
+        <div class="timeline">
+          <!-- REPLACE: EXPERIENCE / EDUCATION DETAILS -->
+          <article class="timeline-item reveal"><h3>Freelance Web Developer & Designer</h3><div class="timeline-meta">Independent · 2024 — Present</div><p>Building responsive websites, visual identities, and digital experiences for personal and client projects.</p></article>
+          <article class="timeline-item reveal"><h3>Game Development Projects</h3><div class="timeline-meta">Independent learning · 2023 — Present</div><p>Exploring game mechanics, level design, and player-focused interfaces while developing practical skills.</p></article>
+          <article class="timeline-item reveal"><h3>Web & Creative Design Learning</h3><div class="timeline-meta">Self-directed education · Ongoing</div><p>Practising front-end development, design fundamentals, and the tools needed to deliver complete projects.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonial-section" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal" style="margin-inline:auto;text-align:center"><span class="eyebrow">Kind words</span><h2 class="section-title">What people <span class="gradient">say.</span></h2><p>Replace these sample quotes with genuine client feedback before publishing.</p></div>
+        <div class="testimonial-wrap reveal">
+          <div class="testimonial-card" aria-live="polite">
+            <div class="quote-mark">“</div><p class="quote" id="testimonial-quote">Isaac understood the direction quickly and turned the idea into a clean, professional result.</p>
+            <div class="client"><img class="avatar" id="testimonial-avatar" src="images/client1.jpg" alt="Client avatar" data-fallback="Client"><div class="client-name"><span id="testimonial-name">Daniel A.</span><small id="testimonial-role">Small business owner</small></div></div>
+          </div>
+          <div class="carousel-controls"><button class="icon-btn" id="testimonial-prev" aria-label="Previous testimonial">←</button><div class="dots" id="testimonial-dots" aria-label="Choose testimonial"><button class="dot active" aria-label="Testimonial 1"></button><button class="dot" aria-label="Testimonial 2"></button><button class="dot" aria-label="Testimonial 3"></button></div><button class="icon-btn" id="testimonial-next" aria-label="Next testimonial">→</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Let's collaborate</span><h2 class="section-title">Have a project in <span class="gradient">mind?</span></h2><p>Tell me what you're building. I'll get back to you as soon as I can.</p></div>
+        <div class="contact-grid">
+          <div class="reveal"><h3>Let's make something great.</h3><p>For websites, logos, game projects, or creative collaborations, reach out using the form or direct contact details.</p>
+            <div class="contact-list">
+              <!-- REPLACE: CONTACT DETAILS -->
+              <a class="contact-item" href="mailto:akinniyiisaac68@gmail.com"><span class="float-icon">✉</span><span><small>Email me</small><strong>akinniyiisaac68@gmail.com</strong></span></a>
+              <a class="contact-item" href="tel:+2348144807963"><span class="float-icon">☎</span><span><small>Call me</small><strong>08144807963</strong></span></a>
+              <div class="contact-item"><span class="float-icon">⌖</span><span><small>Based in</small><strong>Lagos, Nigeria</strong></span></div>
+            </div>
+          </div>
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <div class="form-grid"><div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required minlength="2" placeholder="e.g. Alex Johnson"></div><div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div></div>
+            <div class="field"><label for="subject">Subject</label><input id="subject" name="subject" required minlength="3" placeholder="What would you like to build?"></div>
+            <div class="field"><label for="message">Message</label><textarea id="message" name="message" required minlength="10" placeholder="Tell me a little about your project..."></textarea></div>
+            <button class="btn btn-primary" id="send-btn" type="submit">Send Message ↗</button><p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <p class="muted" style="font-size:.8rem;margin-bottom:0">To send directly through a form service, add your endpoint in the script where marked. Until then, the form opens your email app with the message pre-filled.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-row"><a class="brand" href="#home">Isaac<span>Tech.</span></a><div class="footer-links"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#video">Video</a><a href="#experience">Experience</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a></div><span class="muted" style="font-size:.86rem">© <span id="year"></span> IsaacTech</span></div></footer>
+  <button class="icon-btn" id="back-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog"><button class="icon-btn modal-close" data-close-modal aria-label="Close project details">✕</button><img class="modal-image" id="modal-image" src="images/project1.jpg" alt="Project preview" data-fallback="Project preview"><div class="modal-body"><span class="eyebrow">Project details</span><h2 id="modal-title">Project title</h2><p id="modal-description"></p><p><strong>Tools used:</strong> <span id="modal-tools"></span></p><a class="btn btn-primary" id="modal-demo" href="https://github.com/" target="_blank" rel="noopener noreferrer">Open project ↗</a></div></div>
+  </div>
+  <div class="modal lightbox" id="video-modal" role="dialog" aria-modal="true" aria-label="Video lightbox"><div class="modal-dialog"><button class="icon-btn modal-close" data-close-modal aria-label="Close video">✕</button><video id="lightbox-video" class="lightbox-image" controls playsinline></video></div></div>
+
+  <script>
+    (() => {
+      'use strict';
+      const $ = (s, root=document) => root.querySelector(s);
+      const $$ = (s, root=document) => [...root.querySelectorAll(s)];
+
+      // Loader: remove after the page's initial load (also has a safety timeout).
+      const hideLoader = () => { $('#loader').classList.add('hidden'); document.body.classList.remove('loading'); };
+      window.addEventListener('load', hideLoader, {once:true});
+      window.setTimeout(hideLoader, 1800);
+
+      // Theme toggle remembers the user's preference.
+      const themeToggle = $('#theme-toggle');
+      let savedTheme = null;
+      try { savedTheme = localStorage.getItem('isaactech-theme'); } catch (_) {}
+      if (savedTheme === 'dark') document.documentElement.dataset.theme = 'dark';
+      const updateThemeButton = () => {
+        const dark = document.documentElement.dataset.theme === 'dark';
+        themeToggle.textContent = dark ? '☀' : '☾';
+        themeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      };
+      updateThemeButton();
+      themeToggle.addEventListener('click', () => {
+        const dark = document.documentElement.dataset.theme === 'dark';
+        document.documentElement.dataset.theme = dark ? 'light' : 'dark';
+        try { localStorage.setItem('isaactech-theme', dark ? 'light' : 'dark'); } catch (_) {}
+        updateThemeButton();
+      });
+
+      // Mobile navigation opens, then closes after a section is selected.
+      const menuToggle = $('#menu-toggle'), navLinks = $('#nav-links');
+      menuToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+        menuToggle.textContent = open ? '✕' : '☰';
+      });
+      $$('#nav-links a').forEach(a => a.addEventListener('click', () => {
+        navLinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false'); menuToggle.setAttribute('aria-label','Open navigation menu'); menuToggle.textContent='☰';
+      }));
+
+      // Typing animation cycles through the user's main services.
+      const roles = ['Web Developer', 'Logo Designer', 'Game Developer'];
+      const typed = $('#typed-role');
+      let roleIndex = 0, charIndex = 0, deleting = false;
+      function typeRole() {
+        const word = roles[roleIndex];
+        typed.textContent = word.slice(0, charIndex);
+        if (!deleting && charIndex < word.length) { charIndex++; setTimeout(typeRole, 95); }
+        else if (!deleting) { deleting = true; setTimeout(typeRole, 1300); }
+        else if (charIndex > 0) { charIndex--; setTimeout(typeRole, 48); }
+        else { deleting = false; roleIndex = (roleIndex + 1) % roles.length; setTimeout(typeRole, 300); }
+      }
+      typeRole();
+
+      // Broken image fallback: creates a neutral, accessible placeholder.
+      function attachImageFallback(img) {
+        const fallback = () => {
+          if (img.dataset.fallbackDone) return;
+          img.dataset.fallbackDone = '1';
+          const label = (img.dataset.fallback || 'Image unavailable').replace(/[<>&]/g, '');
+          const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420"><rect width="640" height="420" fill="#e9e8f4"/><g fill="#77758f" text-anchor="middle" font-family="Arial,sans-serif"><text x="320" y="195" font-size="42">▧</text><text x="320" y="240" font-size="22">${label}</text></g></svg>`;
+          img.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+          img.style.objectFit = img.style.objectFit || 'cover';
+        };
+        img.addEventListener('error', fallback);
+        if (img.complete && img.naturalWidth === 0 && !img.dataset.fallbackDone) fallback();
+      }
+      $$('img').forEach(attachImageFallback);
+
+      // Reveal animations and skill bars only run as elements enter view.
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if ('IntersectionObserver' in window && !reducedMotion) {
+        const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('in-view'); revealObserver.unobserve(entry.target); }
+        }), {threshold:.12});
+        $$('.reveal').forEach(el => revealObserver.observe(el));
+        const skillObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+          if (entry.isIntersecting) { $$('[data-width]', entry.target).forEach(bar => bar.style.width = bar.dataset.width); skillObserver.unobserve(entry.target); }
+        }), {threshold:.35});
+        $$('.skill-card').forEach(el => skillObserver.observe(el));
+      } else {
+        $$('.reveal').forEach(el => el.classList.add('in-view'));
+        $$('[data-width]').forEach(bar => bar.style.width = bar.dataset.width);
+      }
+
+      // Current-section navigation highlight + progress + back-to-top.
+      const sections = $$('main section[id]');
+      const navAnchors = $$('#nav-links a');
+      function updateScrollUI() {
+        const scrollTop = window.scrollY;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        $('#top-progress').style.width = (maxScroll > 0 ? scrollTop / maxScroll * 100 : 0) + '%';
+        $('#back-top').classList.toggle('visible', scrollTop > 500);
+        let current = 'home';
+        sections.forEach(section => { if (scrollTop + 150 >= section.offsetTop) current = section.id; });
+        navAnchors.forEach(a => { const active = a.getAttribute('href') === '#' + current; a.classList.toggle('active', active); if(active) a.setAttribute('aria-current','location'); else a.removeAttribute('aria-current'); });
+      }
+      window.addEventListener('scroll', updateScrollUI, {passive:true});
+      window.addEventListener('resize', updateScrollUI);
+      updateScrollUI();
+      $('#back-top').addEventListener('click', () => window.scrollTo({top:0,behavior:reducedMotion?'auto':'smooth'}));
+      $('#year').textContent = new Date().getFullYear();
+
+      // Project category filter.
+      $$('.filter-btn[data-filter]').forEach(btn => btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        $$('.filter-btn[data-filter]').forEach(b => { const active = b === btn; b.classList.toggle('active',active); b.setAttribute('aria-pressed',String(active)); });
+        $$('.project-card').forEach(card => {
+          const show = filter === 'all' || card.dataset.category === filter;
+          card.classList.toggle('hide', !show);
+          if (show) { card.classList.remove('in-view'); requestAnimationFrame(() => card.classList.add('in-view')); }
+        });
+      }));
+
+      // Accessible modal handling, including outside click, Escape, and focus restoration.
+      let lastFocused = null;
+      function openModal(modal) {
+        lastFocused = document.activeElement;
+        modal.classList.add('open'); document.body.style.overflow = 'hidden';
+        const close = $('[data-close-modal]', modal); if (close) close.focus();
+      }
+      function closeModal(modal) {
+        modal.classList.remove('open'); document.body.style.overflow = '';
+        if (modal === $('#video-modal')) { const v = $('#lightbox-video'); v.pause(); v.removeAttribute('src'); v.load(); }
+        if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+      }
+      $$('[data-close-modal]').forEach(btn => btn.addEventListener('click', () => closeModal(btn.closest('.modal'))));
+      $$('.modal').forEach(modal => modal.addEventListener('click', e => { if (e.target === modal) closeModal(modal); }));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') $$('.modal.open').forEach(closeModal); });
+
+      $$('.details-btn').forEach(btn => btn.addEventListener('click', () => {
+        const card = btn.closest('.project-card');
+        const modalImg = $('#modal-image');
+        // Set image safely and keep fallback handling if a selected image is missing.
+        modalImg.src = card.dataset.image; modalImg.alt = card.dataset.title + ' project preview';
+        modalImg.dataset.fallbackDone = '';
+        $('#modal-title').textContent = card.dataset.title;
+        $('#modal-description').textContent = card.dataset.description;
+        $('#modal-tools').textContent = card.dataset.tools;
+        $('#modal-demo').href = card.dataset.demo;
+        openModal($('#project-modal'));
+      }));
+
+      // Video play overlay and optional lightbox. Local files are expected in /videos.
+      const introVideo = $('#intro-video'), videoCover = $('#video-play');
+      videoCover.addEventListener('click', async () => {
+        videoCover.hidden = true;
+        try { await introVideo.play(); } catch (_) { videoCover.hidden = false; introVideo.controls = true; }
+      });
+      introVideo.addEventListener('play', () => videoCover.hidden = true);
+      introVideo.addEventListener('pause', () => { if (introVideo.currentTime === 0) videoCover.hidden = false; });
+      introVideo.addEventListener('ended', () => videoCover.hidden = false);
+      function showVideoInLightbox(src, poster) {
+        const lightVideo = $('#lightbox-video');
+        lightVideo.src = src;
+        if (poster) lightVideo.poster = poster;
+        openModal($('#video-modal'));
+        lightVideo.play().catch(() => {});
+      }
+      $('#video-lightbox-btn').addEventListener('click', () => showVideoInLightbox('videos/intro.mp4','images/video-thumbnail.jpg'));
+      $$('.video-thumb').forEach(btn => btn.addEventListener('click', () => {
+        const src = btn.dataset.video, poster = btn.dataset.poster;
+        introVideo.pause(); introVideo.src = src; introVideo.poster = poster; introVideo.load(); videoCover.hidden = false;
+        $('#video-shell').scrollIntoView({behavior:reducedMotion?'auto':'smooth',block:'center'});
+      }));
+
+      // Testimonial carousel with autoplay, arrows, and dots.
+      const testimonials = [
+        {quote:'Isaac understood the direction quickly and turned the idea into a clean, professional result.',name:'Daniel A.',role:'Small business owner',avatar:'images/client1.jpg'},
+        {quote:'Communication was clear, the details felt thoughtful, and the final concept matched what I had in mind.',name:'Miriam K.',role:'Creative entrepreneur',avatar:'images/client2.jpg'},
+        {quote:'A creative problem-solver who cares about both the look and the user experience.',name:'Samuel O.',role:'Project collaborator',avatar:'images/client3.jpg'}
+      ];
+      let testimonialIndex = 0, testimonialTimer;
+      function renderTestimonial(index) {
+        testimonialIndex = (index + testimonials.length) % testimonials.length;
+        const item = testimonials[testimonialIndex];
+        $('#testimonial-quote').textContent = item.quote; $('#testimonial-name').textContent = item.name; $('#testimonial-role').textContent = item.role;
+        const avatar = $('#testimonial-avatar'); avatar.dataset.fallbackDone = ''; avatar.src = item.avatar; avatar.alt = item.name + ' avatar'; avatar.dataset.fallback = 'Client';
+        $$('#testimonial-dots .dot').forEach((dot,i) => { dot.classList.toggle('active',i===testimonialIndex); dot.setAttribute('aria-pressed',String(i===testimonialIndex)); });
+      }
+      function restartAutoplay() { clearInterval(testimonialTimer); testimonialTimer = setInterval(() => renderTestimonial(testimonialIndex+1), 6000); }
+      $('#testimonial-prev').addEventListener('click', () => { renderTestimonial(testimonialIndex-1); restartAutoplay(); });
+      $('#testimonial-next').addEventListener('click', () => { renderTestimonial(testimonialIndex+1); restartAutoplay(); });
+      $$('#testimonial-dots .dot').forEach((dot,i) => dot.addEventListener('click', () => { renderTestimonial(i); restartAutoplay(); }));
+      renderTestimonial(0); restartAutoplay();
+      $('#testimonials').addEventListener('mouseenter', () => clearInterval(testimonialTimer));
+      $('#testimonials').addEventListener('mouseleave', restartAutoplay);
+      $('#testimonials').addEventListener('focusin', () => clearInterval(testimonialTimer));
+      $('#testimonials').addEventListener('focusout', restartAutoplay);
+
+      // Contact form validation. Add your Formspree endpoint below to enable direct submission.
+      const form = $('#contact-form'), status = $('#form-status'), sendBtn = $('#send-btn');
+      // REPLACE: PASTE YOUR FORMSPREE ENDPOINT, e.g. https://formspree.io/f/xxxxxxxx
+      const FORM_ENDPOINT = '';
+      form.addEventListener('submit', async e => {
+        e.preventDefault(); status.className = 'form-status'; status.textContent = '';
+        if (!form.checkValidity()) {
+          form.reportValidity(); status.classList.add('error'); status.textContent = 'Please complete all fields with valid information.'; return;
+        }
+        const data = Object.fromEntries(new FormData(form).entries());
+        if (FORM_ENDPOINT.trim()) {
+          sendBtn.disabled = true; sendBtn.textContent = 'Sending…';
+          try {
+            const response = await fetch(FORM_ENDPOINT, {method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(data)});
+            if (!response.ok) throw new Error('Submission failed');
+            status.classList.add('success'); status.textContent = 'Thanks! Your message has been sent successfully.'; form.reset();
+          } catch (_) {
+            status.classList.add('error'); status.textContent = 'The message could not be sent. Please email me directly instead.';
+          } finally { sendBtn.disabled = false; sendBtn.textContent = 'Send Message ↗'; }
+        } else {
+          const subject = encodeURIComponent(data.subject);
+          const body = encodeURIComponent('Name: '+data.name+'\nEmail: '+data.email+'\n\n'+data.message);
+          status.classList.add('success'); status.textContent = 'Your email app should open with your message. If it does not, email akinniyiisaac68@gmail.com directly.';
+          window.location.href = 'mailto:akinniyiisaac68@gmail.com?subject='+subject+'&body='+body;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

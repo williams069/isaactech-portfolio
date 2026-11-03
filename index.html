@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#6d5dfc">
   <meta name="description" content="IsaacTech — web developer, logo designer, and game developer creating thoughtful digital experiences.">
-  <meta property="og:title" content="IsaacTech | Developer & Designer">
+  <meta property="og:title" content="andrewTech | Developer & Designer">
   <meta property="og:description" content="Explore web development, brand design, and game development projects by IsaacTech.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/profile.jpg">
@@ -32,10 +32,10 @@
 </head>
 <body class="loading">
   <div class="top-progress" id="top-progress" aria-hidden="true"></div>
-  <div id="loader" role="status" aria-label="Loading website"><div class="loader-mark">Isaac<span class="gradient">Tech.</span></div></div>
+  <div id="loader" role="status" aria-label="Loading website"><div class="loader-mark">Andrew<span class="gradient">Tech.</span></div></div>
   <header>
     <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="IsaacTech home">Isaac<span>Tech.</span></a>
+      <a class="brand" href="#home" aria-label="AndrewTech home">Andrew<span>Tech.</span></a>
       <div class="nav-links" id="nav-links">
         <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#video">Video</a><a href="#experience">Experience</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a>
       </div>
@@ -51,8 +51,8 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-text reveal">
-          <span class="eyebrow">✦ Creative developer & designer</span>
-          <h1>Hi, I'm <span class="name gradient"><!-- REPLACE: YOUR NAME -->IsaacTech</span></h1>
+          <span class="eyebrow"> Creative developer & designer</span>
+          <h1>Hi, I'm <span class="name gradient"><!-- REPLACE: YOUR NAME -->AndrewTech</span></h1>
           <div class="typed-line"><span id="typed-role">Web Developer</span><span class="cursor" aria-hidden="true"></span></div>
           <p class="hero-copy"><!-- REPLACE: YOUR TAGLINE -->I turn ideas into polished digital experiences through web development, brand design, and game development.</p>
           <div class="hero-ctas"><a class="btn btn-primary" href="#projects">View My Work <span aria-hidden="true">↘</span></a><a class="btn btn-outline" href="#contact">Contact Me <span aria-hidden="true">↗</span></a></div>
@@ -67,7 +67,7 @@
         <div class="hero-visual reveal">
           <div class="portrait-frame">
             <!-- REPLACE WITH YOUR PHOTO -->
-            <img src="Thoughtful Office Portrait.png" alt="Photo of IsaacTech" data-fallback="Profile photo">
+            <img src="Thoughtful Office Portrait.png" alt="Photo of AndrewTech" data-fallback="Profile photo">
           </div>
           <div class="float-card float-one"><span class="float-icon">✦</span><span>Creative solutions<small>From idea to launch</small></span></div>
           <div class="float-card float-two"><span class="float-icon">⌘</span><span>Digital builder<small>Web · Design · Games</small></span></div>
@@ -88,7 +88,7 @@
           <p>I combine thoughtful design with practical code to build responsive websites, memorable visual identities, and engaging game experiences. I value clear communication, attention to detail, and solutions that help people reach their goals.</p>
           <p>Have an idea you want to bring to life? Let's work together and make it real.</p>
           <div class="facts">
-            <div class="fact"><strong>Lagos, Nigeria</strong><span>Location</span></div>
+            <div class="fact"><strong>poland</strong><span>Location</span></div>
             <div class="fact"><strong>Project-based</strong><span>Experience</span></div>
             <div class="fact"><strong>Available</strong><span>For projects</span></div>
           </div>
@@ -203,8 +203,8 @@
           <div class="reveal"><h3>Let's make something great.</h3><p>For websites, logos, game projects, or creative collaborations, reach out using the form or direct contact details.</p>
             <div class="contact-list">
               <!-- REPLACE: CONTACT DETAILS -->
-              <a class="contact-item" href="mailto:akinniyiisaac68@gmail.com"><span class="float-icon">✉</span><span><small>Email me</small><strong>akinniyiisaac68@gmail.com</strong></span></a>
-              <a class="contact-item" href="tel:+2348144807963"><span class="float-icon">☎</span><span><small>Call me</small><strong>08144807963</strong></span></a>
+              <a class="contact-item" href="mailto:andrew68@gmail.com"><span class="float-icon">✉</span><span><small>Email me</small><strong>akinniyiisaac68@gmail.com</strong></span></a>
+              <a class="contact-item" href="tel:+18144807963"><span class="float-icon">☎</span><span><small>Call me</small><strong>08144807963</strong></span></a>
               <div class="contact-item"><span class="float-icon">⌖</span><span><small>Based in</small><strong>Lagos, Nigeria</strong></span></div>
             </div>
           </div>
@@ -242,7 +242,7 @@
       // Theme toggle remembers the user's preference.
       const themeToggle = $('#theme-toggle');
       let savedTheme = null;
-      try { savedTheme = localStorage.getItem('isaactech-theme'); } catch (_) {}
+      try { savedTheme = localStorage.getItem('andrewtech-theme'); } catch (_) {}
       if (savedTheme === 'dark') document.documentElement.dataset.theme = 'dark';
       const updateThemeButton = () => {
         const dark = document.documentElement.dataset.theme === 'dark';
@@ -253,7 +253,7 @@
       themeToggle.addEventListener('click', () => {
         const dark = document.documentElement.dataset.theme === 'dark';
         document.documentElement.dataset.theme = dark ? 'light' : 'dark';
-        try { localStorage.setItem('isaactech-theme', dark ? 'light' : 'dark'); } catch (_) {}
+        try { localStorage.setItem('Andrewtech-theme', dark ? 'light' : 'dark'); } catch (_) {}
         updateThemeButton();
       });
 
@@ -442,7 +442,7 @@
           const subject = encodeURIComponent(data.subject);
           const body = encodeURIComponent('Name: '+data.name+'\nEmail: '+data.email+'\n\n'+data.message);
           status.classList.add('success'); status.textContent = 'Your email app should open with your message. If it does not, email akinniyiisaac68@gmail.com directly.';
-          window.location.href = 'mailto:akinniyiisaac68@gmail.com?subject='+subject+'&body='+body;
+          window.location.href = 'mailto:andrew68@gmail.com?subject='+subject+'&body='+body;
         }
       });
     })();
